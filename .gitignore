@@ -22,7 +22,7 @@
 /data/pages/*
 /data/tmp/*
 /lib/tpl/*
-/lib/plugins/*
+!/lib/plugins/*
 !/lib/plugins/acl
 !/lib/plugins/config
 !/lib/plugins/info
