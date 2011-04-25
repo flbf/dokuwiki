@@ -43,6 +43,7 @@ require_once(dirname(__FILE__).'/tpl_functions.php');
 
 <div id="menubar" class="dokuwiki">   
    
+	        <a href="<?php echo wl(); ?>"><img style="width:42px; float:left" src="<?php echo DOKU_TPL?>images/logo_alone.png" alt="<?php echo $conf['title']; ?>" title="<?php echo $conf['title']; ?>"/></a>
 		<?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle"')?>
 		<?php tpl_searchform() ?>		 
       <?php if(!tpl_getConf('hideactions') || tpl_getConf('hideactions') && isset($_SERVER['REMOTE_USER'])) { ?>
@@ -199,6 +200,7 @@ require_once(dirname(__FILE__).'/tpl_functions.php');
     </div>
     <?php } ?>
 
+  <?php tpl_license(false);?>
 
 </div>
 
