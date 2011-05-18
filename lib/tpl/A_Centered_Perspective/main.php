@@ -127,8 +127,14 @@ require_once(dirname(__FILE__).'/tpl_functions.php');
           <?php tpl_sidebar('left') ?>
         </div>
         <div class="right-page">
-          <div id="page"><?php ($notoc) ? tpl_content(false) : tpl_content() ?>
-	
+          <div id="page">
+
+<?php
+$translation = &plugin_load('helper','translation');
+if ($translation) echo $translation->showTranslations();
+?>
+
+<?php ($notoc) ? tpl_content(false) : tpl_content() ?>
 	
 			<div class="meta">
 			  <div class="user">
